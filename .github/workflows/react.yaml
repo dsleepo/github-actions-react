@@ -20,6 +20,14 @@ jobs:
             ${{ runner.os }}-yarn-
       - run: yarn
       - run: yarn build
+      - run: yarn test --coverage
+        env:
+          CI: true
+      - uses: actions/upload-artifact@v2
+        with:
+          name: coverage
+          path: coverage/
+          if-no-files-found: error
       - uses: actions/upload-artifact@v2
         with:
           name: build
