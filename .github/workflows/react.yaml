@@ -52,5 +52,5 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: ru-central1
           SOURCE_DIR: ./build
-          DEST_DIR: ./pr/${{github.run_id}}
+          DEST_DIR: pr/${{github.run_id}}
           AWS_S3_ENDPOINT: https://storage.yandexcloud.net
